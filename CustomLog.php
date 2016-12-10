@@ -129,7 +129,7 @@ class CustomLog {
 	 * @return void
 	 */
 	public function insertToDB($logtable = "log", $msg){
-		$sql = "INSERT INTO log (log_descr) VALUES ('".$msg."')";
+		$sql = "INSERT INTO ".$logtable." (log_descr) VALUES ('".$msg."')";
 		if (!$this->conn->query($sql) === TRUE) {			
 			echo "Error: " . $sql . "<br>" . $this->conn->error;
 		}

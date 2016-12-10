@@ -5,7 +5,7 @@ require_once("CustomLog.php");
 
 /******************** SAVE CUSTOM LOG TO FILE ********************/
 
-$log = new CustomLog(); 
+$log = new CustomLog(); // or change target with: new CustomLog("another.log"); 
 
 $log->startToFile(); // Comment out to force appending log messages to file on each run
 
@@ -31,7 +31,7 @@ $log->stopToFile(); // Comment out to force appending log messages to file on ea
 
 /******************** SAVE CUSTOM LOG TO DATABASE ********************/
 
-$log->startToDB("","root","","test");
+$log->startToDB("","root","","test"); // provide the right credentials
 
 $log->clearDB(); // Comment out to force appending log messages to database table on each run
 
